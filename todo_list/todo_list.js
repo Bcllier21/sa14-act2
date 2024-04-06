@@ -19,19 +19,19 @@ for (j = 0; j < myTaskList.length; j++) {
     
 document.getElementsByClassName("addTask").addEventListener('click', function() {
     const tInput = document.getElementById('taskinput');
-    // const dInput = document.getElementById('descinput');
+    const dInput = document.getElementById('descinput');
     const task = tInput.value;
-    // const desc = descinput.value;
+    const desc = descinput.value;
     if (task) {
         const taskslist = document.getElementById('tasklist');
         const newtask = document.createElement('li').setAttribute("id","taskitem");
-        // const dt = document.createElement('p').setAttribute("id","hidehover");
+        const dt = document.createElement('p').setAttribute("id","hidehover");
         newtask.textContext = task;
-        // dt.textContext = desc;
+        dt.textContext = desc;
         taskslist.appendChild(newtask);
-        // tasklist.appendChild(desc);
+        tasklist.appendChild(desc);
         tInput.value="";
-        // dInput.value="";
+        dInput.value="";
     }
 });
 
